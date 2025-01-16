@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UV Index Checker</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>UV Index Checker</h1>
+    <% if (uvIndex !== 'Error') { %>
+        <p>The current UV Index is: <%= uvIndex %></p>
+        <% if (sunscreenNeeded) { %>
+            <p style="color: red;">You need to apply sunscreen today!</p>
+        <% } else { %>
+            <p style="color: green;">No sunscreen needed today.</p>
+        <% } %>
+    <% } else { %>
+        <p style="color: red;"><%= error %></p>
+    <% } %>
+</body>
+</html>
